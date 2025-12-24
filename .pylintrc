@@ -1,0 +1,96 @@
+[MAIN]
+analyse-fallback-blocks=no
+clear-cache-post-run=no
+fail-on=
+fail-under=7.0
+ignore=CVS,.git,node_modules,__pycache__,databases
+ignore-paths=
+ignore-patterns=test_.*\.py
+jobs=1
+limit-inference-results=100
+load-plugins=
+persistent=yes
+py-version=3.11
+recursive=no
+source-roots=
+unsafe-load-any-extension=no
+
+[MESSAGES CONTROL]
+confidence=HIGH,CONTROL_FLOW,INFERENCE,INFERENCE_FAILURE,UNDEFINED
+disable=raw-checker-failed,
+        bad-inline-option,
+        locally-disabled,
+        file-ignored,
+        suppressed-message,
+        useless-suppression,
+        deprecated-pragma,
+        use-symbolic-message-instead,
+        missing-module-docstring,
+        missing-class-docstring,
+        missing-function-docstring,
+        too-few-public-methods,
+        import-outside-toplevel
+enable=c-extension-no-member
+
+[REPORTS]
+evaluation=max(0, 0 if fatal else 10.0 - ((float(5 * error + warning + refactor + convention) / statement) * 10))
+msg-template=
+output-format=text
+reports=no
+score=yes
+
+[FORMAT]
+expected-line-ending-format=
+ignore-long-lines=^\s*(# )?<?https?://\S+>?$
+indent-after-paren=4
+indent-string='    '
+max-line-length=120
+max-module-lines=1000
+single-line-class-stmt=no
+single-line-if-stmt=no
+
+[BASIC]
+argument-naming-style=snake_case
+attr-naming-style=snake_case
+bad-names=foo,bar,baz,toto,tutu,tata
+class-attribute-naming-style=any
+class-const-naming-style=UPPER_CASE
+class-naming-style=PascalCase
+const-naming-style=UPPER_CASE
+docstring-min-length=-1
+function-naming-style=snake_case
+good-names=i,j,k,ex,_,id,db
+inlinevar-naming-style=any
+method-naming-style=snake_case
+module-naming-style=snake_case
+no-docstring-rgx=^_
+property-classes=abc.abstractproperty
+variable-naming-style=snake_case
+
+[DESIGN]
+exclude-too-few-public-methods=
+max-args=10
+max-attributes=15
+max-bool-expr=5
+max-branches=12
+max-locals=15
+max-parents=7
+max-public-methods=20
+max-returns=6
+max-statements=50
+min-public-methods=1
+
+[IMPORTS]
+allow-any-import-level=
+allow-reexport-from-package=no
+allow-wildcard-with-all=no
+deprecated-modules=
+ext-import-graph=
+import-graph=
+int-import-graph=
+known-standard-library=
+known-third-party=enchant
+preferred-modules=
+
+[EXCEPTIONS]
+overgeneral-exceptions=builtins.BaseException,builtins.Exception
