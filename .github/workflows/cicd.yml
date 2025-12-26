@@ -190,7 +190,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install --with-deps chromium firefox webkit
 
       - name: Build Frontend for Production
         run: npm run build
